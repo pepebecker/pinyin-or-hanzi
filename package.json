@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/pepebecker/pinyin-or-hanzi#readme",
   "dependencies": {
-    "find-hanzi": "git+https://git@github.com/pepebecker/find-hanzi.git",
-    "pinyin-utils": "git+https://git@github.com/pepebecker/pinyin-utils.git",
+    "find-hanzi": "git+https://github.com/pepebecker/find-hanzi.git",
+    "pinyin-utils": "git+https://github.com/pepebecker/pinyin-utils.git",
     "so": "^1.0.1"
   },
   "devDependencies": {
