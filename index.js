@@ -27,7 +27,7 @@ const check = (text) => new Promise((yay, nay) => {
 				}
 			}
 		}
-		nay('Not a Chinese language')
+		yay(0)
 	}, (error) => nay('pinyin-or-hanzi -> ' + error))
 })
 
