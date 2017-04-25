@@ -21,7 +21,7 @@ const check = (text) => new Promise((yay, nay) => {
 	findHanzi(text, {multiple: true}).then((data) => {
 		if (data && data.length > 0) {
 			for (let item of data) {
-				if (text.match(item.hanzi)) {
+				if (item.hanzi && text.match(item.hanzi)) {
 					yay(1)
 					return
 				}
