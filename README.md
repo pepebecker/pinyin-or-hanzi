@@ -1,5 +1,5 @@
 # Pinyin or Hanzi
 ## Install
 ```shell
-npm install git+https://git@github.com/pepebecker/pinyin-or-hanzi.git
+npm install pinyin-or-hanzi@pepebecker/pinyin-or-hanzi
 ```
