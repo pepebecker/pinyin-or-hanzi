@@ -5,13 +5,13 @@ const findHanzi = require('find-hanzi')
 const so = require('so')
 
 const check = (text) => new Promise((yay, nay) => {
-	if (text.match(new RegExp('[a-zA-ZüÜ]+[1-4]'))) {
+	if (/[a-zA-ZüÜ]+[1-4]/.test(text)) {
 		yay(3)
 		return
 	} else {
 		for (let i in utils.vovels) {
 			for (let tone of utils.vovels[i]) {
-				if (text.match(tone)) {
+				if (text.indexOf(tone) > 0) {
 					yay(2)
 					return
 				}
@@ -22,8 +22,8 @@ const check = (text) => new Promise((yay, nay) => {
 	so(function*() {
 		let list = []
 		const characters = text.split('')
-		for (let char of characters) {
-			yield findHanzi(char).then((data) => {
+		for (let hanzi of characters) {
+			yield findHanzi(hanzi).then((data) => {
 				list = list.concat(data)
 			}, (error) => nay('pinyin-or-hanzi -> ' + error))	
 		}
