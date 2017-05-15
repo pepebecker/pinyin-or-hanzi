@@ -1,7 +1,7 @@
 {
   "name": "pinyin-or-hanzi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Check which type of Pinyin or Hanzi a text is written in.",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -12,8 +12,14 @@
     "type": "git",
     "url": "https://github.com/pepebecker/pinyin-or-hanzi.git"
   },
+  "keywords": [
+    "pinyin",
+    "hanzi",
+    "chinese",
+    "mandarin"
+  ],
   "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pepebecker/pinyin-or-hanzi/issues"
   },
