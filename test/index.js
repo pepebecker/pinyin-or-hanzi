@@ -18,4 +18,9 @@ describe('Detect the right language', () => {
 			data.should.equal(1)
 		})
 	})
+	it('should not detect anything', () => {
+		return pinyinOrHanzi('this is not chinese at all!').then((data) => {
+			data.should.equal(0)
+		})
+	})
 })
