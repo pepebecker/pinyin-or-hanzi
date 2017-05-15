@@ -1,5 +1,6 @@
 # Pinyin or Hanzi
 
+[![npm version](https://img.shields.io/npm/v/pinyin-or-hanzi.svg)](https://www.npmjs.com/package/pinyin-or-hanzi)
 [![Travis Build Status](https://travis-ci.org/pepebecker/pinyin-or-hanzi.svg)](https://travis-ci.org/pepebecker/pinyin-or-hanzi)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/pinyin-or-hanzi/badge.svg)](https://coveralls.io/github/pepebecker/pinyin-or-hanzi)
 [![dependency status](https://img.shields.io/david/pepebecker/pinyin-or-hanzi.svg)](https://david-dm.org/pepebecker/pinyin-or-hanzi)
