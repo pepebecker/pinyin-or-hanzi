@@ -42,7 +42,7 @@ getType('this is not chinese at all!')
 - [`pinyin-split`](https://github.com/pepebecker/pinyin-split)
 - [`find-hanzi`](https://github.com/pepebecker/find-hanzi)
 - [`hanzi-to-pinyin`](https://github.com/pepebecker/hanzi-to-pinyin)
-- [`pinyin-converter`](https://github.com/pepebecker/pinyin-converter)
+- [`pinyin-convert`](https://github.com/pepebecker/pinyin-convert)
 
 ## Contributing
 
