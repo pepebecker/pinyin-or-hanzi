@@ -1,6 +1,6 @@
 {
   "name": "pinyin-or-hanzi",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check which type of Pinyin or Hanzi a text is written in.",
   "main": "index.js",
   "scripts": {
