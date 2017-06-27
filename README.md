@@ -47,6 +47,7 @@ getType('this is not chinese at all!')
 - [`pinyin-rest`](https://github.com/pepebecker/pinyin-rest)
 - [`pinyin-api`](https://github.com/pepebecker/pinyin-api)
 - [`pinyin-bot-core`](https://github.com/pepebecker/pinyin-bot-core)
+- [`pinyin-telegram`](https://github.com/pepebecker/pinyin-telegram)
 - [`pinyin-messenger`](https://github.com/pepebecker/pinyin-messenger)
 
 ## Contributing
