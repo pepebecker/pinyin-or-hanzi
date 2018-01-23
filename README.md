@@ -1,5 +1,7 @@
 # Pinyin or Hanzi
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/pinyin-or-hanzi.svg)](https://greenkeeper.io/)
+
 [![npm version](https://img.shields.io/npm/v/pinyin-or-hanzi.svg)](https://www.npmjs.com/package/pinyin-or-hanzi)
 [![Travis Build Status](https://travis-ci.org/pepebecker/pinyin-or-hanzi.svg)](https://travis-ci.org/pepebecker/pinyin-or-hanzi)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/pinyin-or-hanzi/badge.svg)](https://coveralls.io/github/pepebecker/pinyin-or-hanzi)
