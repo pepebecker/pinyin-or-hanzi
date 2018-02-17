@@ -1,40 +1,45 @@
 'use strict'
 
 const utils = require('pinyin-utils')
-const findHanzi = require('find-hanzi')
-const so = require('so')
 
-const check = (text) => new Promise((yay, nay) => {
+const ranges = [
+	{
+		start: parseInt('2E80', 16),
+		end: parseInt('2FD5', 16)
+	},
+	{
+		start: parseInt('3400', 16),
+		end: parseInt('4DBF', 16)
+	},
+	{
+		start: parseInt('4E00', 16),
+		end: parseInt('9FCC', 16)
+	}
+]
+
+const check = async text => {
 	if (/[a-zA-ZüÜ]+[1-4]/.test(text)) {
-		yay(3)
-		return
+		return 3
 	} else {
 		for (let i in utils.vovels) {
 			for (let tone of utils.vovels[i]) {
 				if (text.indexOf(tone) > 0) {
-					yay(2)
-					return
+					return 2
 				}
 			}
 		}
 	}
-	
-	so(function*() {
-		let list = []
-		const characters = text.split('')
-		for (let hanzi of characters) {
-			yield findHanzi(hanzi).then((data) => {
-				list = list.concat(data)
-			}, (error) => nay('pinyin-or-hanzi -> ' + error))	
-		}
-		for (let item of list) {
-			if (item.hanzi && text.match(item.hanzi)) {
-				yay(1)
-				return
+
+	for (let i = 0; i < text.length; i++) {
+		let code = text[i].charCodeAt(0)
+		for (let range of ranges) {
+			if (code >= range.start && code <= range.end) {
+				return 1
 			}
 		}
-		yay(0)
-	})()
-})
+	}
+
+	return 0
+}
 
 module.exports = check

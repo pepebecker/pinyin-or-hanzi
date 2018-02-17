@@ -2,38 +2,37 @@
   "name": "pinyin-or-hanzi",
   "version": "1.0.3",
   "description": "Check which type of Pinyin or Hanzi a text is written in.",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha",
-    "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  "keywords": [
+    "chinese",
+    "hanzi",
+    "mandarin",
+    "pinyin"
+  ],
+  "homepage": "https://github.com/pepebecker/pinyin-or-hanzi#readme",
+  "bugs": {
+    "url": "https://github.com/pepebecker/pinyin-or-hanzi/issues"
   },
+  "license": "MIT",
+  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
+  "files": [],
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/pepebecker/pinyin-or-hanzi.git"
   },
-  "keywords": [
-    "pinyin",
-    "hanzi",
-    "chinese",
-    "mandarin"
-  ],
-  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pepebecker/pinyin-or-hanzi/issues"
+  "scripts": {
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "test": "mocha"
   },
-  "homepage": "https://github.com/pepebecker/pinyin-or-hanzi#readme",
   "dependencies": {
-    "find-hanzi": "^1.0.6",
-    "pinyin-utils": "^1.0.3",
-    "so": "^1.0.1"
+    "pinyin-utils": "^1.0.6"
   },
   "devDependencies": {
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.3.0",
+    "mocha": "^5.0.1",
     "mocha-lcov-reporter": "^1.3.0",
-    "should": "^11.2.1"
+    "should": "^13.2.1"
   }
 }
