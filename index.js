@@ -18,13 +18,13 @@ const ranges = [
 ]
 
 const check = async text => {
-	if (/[a-zA-ZüÜ]+[1-4]/.test(text)) {
-		return 3
+	if (/[a-zA-ZüÜ]+[1-5]/.test(text)) {
+		return 'pinyin-numbered'
 	} else {
 		for (let i in utils.vovels) {
 			for (let tone of utils.vovels[i]) {
 				if (text.indexOf(tone) > 0) {
-					return 2
+					return 'pinyin-marked'
 				}
 			}
 		}
@@ -34,12 +34,12 @@ const check = async text => {
 		let code = text[i].charCodeAt(0)
 		for (let range of ranges) {
 			if (code >= range.start && code <= range.end) {
-				return 1
+				return 'mandarin'
 			}
 		}
 	}
 
-	return 0
+	return 'other'
 }
 
 module.exports = check

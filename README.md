@@ -20,19 +20,19 @@ npm install pinyin-or-hanzi
 const getType = require('pinyin-or-hanzi')
 
 getType('wo3 de mao1 xi3huan3 he2 niu3nai3')
-.then(console.log) // 3
+.then(console.log) // pinyin-numbered
 .catch(console.error)
 
 getType('wǒ de māo xǐhuǎn hé niǔnǎi')
-.then(console.log) // 2
+.then(console.log) // pinyin-marked
 .catch(console.error)
 
 getType('我的猫喜欢喝牛奶')
-.then(console.log) // 1
+.then(console.log) // mandarin
 .catch(console.error)
 
 getType('this is not chinese at all!')
-.then(console.log) // 0
+.then(console.log) // other
 .catch(console.error)
 ```
 
