@@ -2,7 +2,6 @@
 
 [![npm version](https://img.shields.io/npm/v/pinyin-or-hanzi.svg)](https://www.npmjs.com/package/pinyin-or-hanzi)
 [![Travis Build Status](https://travis-ci.org/pepebecker/pinyin-or-hanzi.svg)](https://travis-ci.org/pepebecker/pinyin-or-hanzi)
-[![Coverage Status](https://coveralls.io/repos/github/pepebecker/pinyin-or-hanzi/badge.svg)](https://coveralls.io/github/pepebecker/pinyin-or-hanzi)
 [![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/pinyin-or-hanzi.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/pepebecker/pinyin-or-hanzi.svg)](https://david-dm.org/pepebecker/pinyin-or-hanzi)
 [![dev dependency status](https://img.shields.io/david/dev/pepebecker/pinyin-or-hanzi.svg)](https://david-dm.org/pepebecker/pinyin-or-hanzi#info=devDependencies)
@@ -20,21 +19,20 @@ npm install pinyin-or-hanzi
 ```js
 const getType = require('pinyin-or-hanzi')
 
-getType('wo3 de mao1 xi3huan3 he2 niu3nai3')
-.then(console.log) // pinyin-numbered
-.catch(console.error)
+console.log(getType('wo3 de mao1 xi3huan3 he2 niu3nai3'))
+// pinyin-numbered
 
-getType('wǒ de māo xǐhuǎn hé niǔnǎi')
-.then(console.log) // pinyin-marked
-.catch(console.error)
+console.log(getType('wǒ de māo xǐhuǎn hé niǔnǎi'))
+// pinyin-marked
 
-getType('我的猫喜欢喝牛奶')
-.then(console.log) // mandarin
-.catch(console.error)
+console.log(getType('ㄨㄛˇ ㄉㄜ˙ ㄇㄠ ㄒㄧˇ ㄏㄨㄢˇ ㄏㄜˊ ㄋㄧㄡˇ ㄋㄞˇ'))
+// zhuyin
 
-getType('this is not chinese at all!')
-.then(console.log) // other
-.catch(console.error)
+console.log(getType('我的猫喜欢喝牛奶'))
+// mandarin
+
+console.log(getType('this is not chinese at all!'))
+// other
 ```
 
 ## Related

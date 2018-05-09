@@ -1,6 +1,7 @@
 'use strict'
 
 const utils = require('pinyin-utils')
+const zhuyin = require('zhuyin')
 
 const ranges = [
 	{
@@ -17,8 +18,10 @@ const ranges = [
 	}
 ]
 
-const check = async text => {
-	if (/[a-zA-ZüÜ]+[1-5]/.test(text)) {
+const check = text => {
+	if (/[a-zA-ZüÜ]+[1-5]/.test(zhuyin.toPinyin(text, { numbered: true }).join(''))) {
+		return 'zhuyin'
+	} else if (/[a-zA-ZüÜ]+[1-5]/.test(text)) {
 		return 'pinyin-numbered'
 	} else {
 		for (let i in utils.vovels) {
