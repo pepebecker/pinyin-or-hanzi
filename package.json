@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "pinyin-utils": "^1.0.8",
-    "zhuyin": "^1.4.0"
+    "zhuyin": "^1.7.0"
   },
   "devDependencies": {
     "mocha": "^5.1.1",
