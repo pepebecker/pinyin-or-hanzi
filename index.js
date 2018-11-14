@@ -19,16 +19,15 @@ const ranges = [
 ]
 
 const check = text => {
-	if (/[a-zA-ZüÜ]+[1-5]/.test(zhuyin.toPinyin(text, { numbered: true }).join(''))) {
+	const numberedPinnyinRE = /[a-zü]+[1-5]/i
+	if (numberedPinnyinRE.test(zhuyin.toPinyin(text, { numbered: true }).join(''))) {
 		return 'zhuyin'
-	} else if (/[a-zA-ZüÜ]+[1-5]/.test(text)) {
+	} else if (numberedPinnyinRE.test(text)) {
 		return 'pinyin-numbered'
 	} else {
-		for (let i in utils.vovels) {
-			for (let tone of utils.vovels[i]) {
-				if (text.indexOf(tone) > 0) {
-					return 'pinyin-marked'
-				}
+		for (let tone of utils.tones) {
+			if (text.normalize('NFD').includes(tone)) {
+				return 'pinyin-marked'
 			}
 		}
 	}
