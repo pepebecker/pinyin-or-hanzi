@@ -15,7 +15,7 @@ npm install pinyin-or-hanzi
 ## Usage
 
 ```js
-const getType = require('pinyin-or-hanzi')
+import getType from 'pinyin-or-hanzi'
 
 console.log(getType('wo3 de mao1 xi3huan3 he2 niu3nai3'))
 // pinyin-numbered
