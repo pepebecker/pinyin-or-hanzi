@@ -30,8 +30,8 @@
     "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json"
   },
   "dependencies": {
-    "pinyin-utils": "^2.0.0",
-    "zhuyin": "^1.12.0"
+    "pinyin-utils": "^2.3.0",
+    "zhuyin": "^1.13.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
