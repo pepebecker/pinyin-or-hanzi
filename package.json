@@ -1,6 +1,6 @@
 {
   "name": "pinyin-or-hanzi",
-  "version": "1.1.0",
+  "version": "1.13.0",
   "description": "Check which type of Pinyin or Hanzi a text is written in.",
   "keywords": [
     "chinese",
