@@ -5,8 +5,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/pinyin-or-hanzi.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/pepebecker/pinyin-or-hanzi.svg)](https://david-dm.org/pepebecker/pinyin-or-hanzi)
 [![dev dependency status](https://img.shields.io/david/dev/pepebecker/pinyin-or-hanzi.svg)](https://david-dm.org/pepebecker/pinyin-or-hanzi#info=devDependencies)
-[![MIT-licensed](https://img.shields.io/github/license/pepebecker/pinyin-or-hanzi.svg)](https://opensource.org/licenses/MIT)
-[![chat on gitter](https://badges.gitter.im/pepebecker.svg)](https://gitter.im/pepebecker)
+[![ISC-licensed](https://img.shields.io/github/license/pepebecker/pinyin-or-hanzi.svg)](https://choosealicense.com/licenses/isc/)
 
 ## Install
 
