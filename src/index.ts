@@ -1,7 +1,5 @@
-'use strict'
-
-const utils = require('pinyin-utils')
-const zhuyin = require('zhuyin')
+import { toneMarks } from 'pinyin-utils'
+import { toPinyin } from 'zhuyin'
 
 const ranges = [
 	{
@@ -18,14 +16,14 @@ const ranges = [
 	}
 ]
 
-const check = text => {
+export const check = (text: string) => {
 	const numberedPinnyinRE = /[a-zü]+[1-5]/i
-	if (numberedPinnyinRE.test(zhuyin.toPinyin(text, { numbered: true }).join(''))) {
+	if (numberedPinnyinRE.test(toPinyin(text, { numbered: true }).join(''))) {
 		return 'zhuyin'
 	} else if (numberedPinnyinRE.test(text)) {
 		return 'pinyin-numbered'
 	} else {
-		for (let tone of utils.tones) {
+		for (let tone of toneMarks) {
 			if (text.normalize('NFD').includes(tone)) {
 				return 'pinyin-marked'
 			}
@@ -44,4 +42,4 @@ const check = text => {
 	return 'other'
 }
 
-module.exports = check
+export default check
